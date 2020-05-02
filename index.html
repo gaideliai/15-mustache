@@ -14,7 +14,13 @@
     </div>
     <div class="benefits">
         <h2>Benefits</h2>
-        <div class="benefit">
+        <script type="text/html" data-mustache="benefits">
+            <div class="benefit">
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+            </div>
+        </script>
+        <!-- <div class="benefit">
             <h3>Siltas</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
@@ -25,9 +31,18 @@
         <div class="benefit">
             <h3>Sausas</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
+        </div> -->
     </div>
-    <div class="services">SERVICES</div>
+    <div class="services">
+        <h2>Services</h2>
+        <script type="text/html" data-mustache="services">
+            <div class="service">
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+                <div class="price">{{price}}</div>
+            </div>
+        </script>
+    </div>
     <div class="testimonials">TESTIMONIALS</div>
     <footer>FOOTER</footer>
     <script src="./js/main.js" type="module"></script>
