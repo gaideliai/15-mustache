@@ -1,0 +1,110 @@
+header {
+  padding: 10px 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 8px #3333;
+          box-shadow: 0 2px 8px #3333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero {
+  height: 400px;
+  background-color: skyblue;
+  font-size: 50px;
+  color: #fff;
+  padding: 20px;
+}
+
+h2 {
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.benefits {
+  display: inline-block;
+  width: 100%;
+}
+
+.benefits > .benefit {
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+}
+
+.benefits > .benefit + .benefit {
+  margin-top: 20px;
+}
+
+.benefits > .benefit > h3 {
+  display: inline-block;
+  width: 100%;
+}
+
+.benefits > .benefit > p {
+  display: inline-block;
+  width: 100%;
+}
+
+.benefits > .benefit:hover {
+  -webkit-box-shadow: 0 2px 8px #3333;
+          box-shadow: 0 2px 8px #3333;
+}
+
+@media (min-width: 500px) {
+  h2 {
+    margin-bottom: 0;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: h2ben;
+  }
+  .benefits {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20px 1fr 1fr 20px;
+        grid-template-columns: 20px 1fr 1fr 20px;
+        grid-template-areas: ". h2ben h2ben ." ". ben1 ben2 ." ". ben3 . .";
+    gap: 20px 40px;
+  }
+  .benefits > .benefit:nth-of-type(1) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: ben1;
+  }
+  .benefits > .benefit:nth-of-type(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: ben2;
+  }
+  .benefits > .benefit:nth-of-type(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: ben3;
+  }
+  .benefits > .benefit + .benefit {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 800px) {
+  .benefits {
+    -ms-grid-columns: 1fr 250px 250px 250px 1fr;
+        grid-template-columns: 1fr 250px 250px 250px 1fr;
+        grid-template-areas: ". h2ben h2ben h2ben ." ". ben1 ben2 ben3 .";
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .benefits {
+    -ms-grid-columns: 1fr 300px 300px 300px 1fr;
+        grid-template-columns: 1fr 300px 300px 300px 1fr;
+        grid-template-areas: ". h2ben h2ben h2ben ." ". ben1 ben2 ben3 .";
+    gap: 40px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
